@@ -7,7 +7,7 @@ import boto3
 import os
 import keyring
 
-env_file = 'rtp9.1.160_config.json'
+env_file = 'config.json'
 
 #Get and format current date
 
