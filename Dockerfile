@@ -1,5 +1,7 @@
 FROM python:3.9-slim
 
+ENV passwd=$password
+
 RUN mkdir /lab_backup
 RUN mkdir /lab_backup/config_backups
 

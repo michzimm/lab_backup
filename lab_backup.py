@@ -7,6 +7,11 @@ import boto3
 import os
 import keyring
 
+#Set keyring password for switches
+
+password = sys.argv[1]
+keyring.set_password("lab_backup", "admin", password)
+
 #Get and format current date
 
 today = date.today()

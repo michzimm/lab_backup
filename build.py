@@ -6,5 +6,5 @@ import getpass
 passwd = getpass.getpass("Enter password: ")
 version = input("Enter build tag version: ")
 
-command = 'docker build --build-arg passwd='+passwd+' . -t lab_backup:'+version
+command = 'docker build --build-arg password='+passwd+' . -t lab_backup:'+version
 os.system(command)
