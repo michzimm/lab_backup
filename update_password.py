@@ -1,8 +1,8 @@
-#!/usr/bin/env python
+#!/usr/bin/python
 
 import keyring
 import getpass
 
-password = getpass.getpass("Enter new password: ")
+password = sys.argv[1]
 
 keyring.set_password("lab_backup", "admin", password)

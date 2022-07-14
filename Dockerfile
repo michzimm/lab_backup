@@ -5,9 +5,10 @@ RUN mkdir /lab_backup/config_backups
 
 COPY ./lab_backup.py /lab_backup/
 COPY ./requirements.txt /lab_backup/
+COPY ./update_password.py /lab_backup/
 
 RUN pip install -r /lab_backup/requirements.txt
-RUN /bin/python -c keyring.set_password("lab_backup", "admin", $passwd)
+RUN update_password.py $passwd
 
 WORKDIR /lab_backup
 
