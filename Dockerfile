@@ -7,6 +7,7 @@ COPY ./lab_backup.py /lab_backup/
 COPY ./requirements.txt /lab_backup/
 
 RUN pip install -r /lab_backup/requirements.txt
+RUN keyring.set_password("lab_backup", "admin", $passwd)
 
 WORKDIR /lab_backup
 

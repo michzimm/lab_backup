@@ -7,8 +7,6 @@ import boto3
 import os
 import keyring
 
-env_file = 'config.json'
-
 #Get and format current date
 
 today = date.today()
@@ -16,6 +14,7 @@ current_date = today.strftime("%m-%d-%Y")
 
 #Open config.json file
 
+env_file = './configs/config.json'
 f = open(env_file)
 env_config = json.load(f)
 
