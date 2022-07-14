@@ -8,7 +8,7 @@ COPY ./requirements.txt /lab_backup/
 COPY ./update_password.py /lab_backup/
 
 RUN pip install -r /lab_backup/requirements.txt
-RUN update_password.py $passwd
+RUN /lab_backup/update_password.py $passwd
 
 WORKDIR /lab_backup
 
