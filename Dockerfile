@@ -11,4 +11,4 @@ RUN pip install -r /lab_backup/requirements.txt
 
 WORKDIR /lab_backup
 
-ENTRYPOINT ["lab_backup.py]
+ENTRYPOINT ["lab_backup.py"]
