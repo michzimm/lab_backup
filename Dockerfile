@@ -14,4 +14,4 @@ RUN pip install -r /lab_backup/requirements.txt
 
 WORKDIR /lab_backup
 
-ENTRYPOINT ["python", "lab_backup.py"]
+ENTRYPOINT ENTRYPOINT ["/bin/bash", "-c", "/usr/bin/python3 lab_backup.py"]

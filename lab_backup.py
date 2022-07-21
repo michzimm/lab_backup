@@ -6,6 +6,7 @@ import json
 import boto3
 import os
 import keyring
+import sys
 
 #Set keyring password for switches
 
