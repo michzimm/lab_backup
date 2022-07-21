@@ -14,4 +14,4 @@ RUN pip install -r /lab_backup/requirements.txt
 
 WORKDIR /lab_backup
 
-ENTRYPOINT ["/bin/bash", "-c", "python3 lab_backup.py"]
+CMD ["sh", "-c", "python3 lab_backup.py ${PASSWD}"]
