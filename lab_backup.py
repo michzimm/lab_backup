@@ -5,13 +5,6 @@ from netmiko import ConnectHandler
 import json
 import boto3
 import os
-import keyring
-import sys
-
-#Set keyring password for switches
-
-password = sys.argv[1]
-keyring.set_password("lab_backup", "admin", password)
 
 #Get and format current date
 
@@ -24,14 +17,6 @@ env_file = './configs/config.json'
 f = open(env_file)
 env_config = json.load(f)
 
-#Get credential information from the config.json file
-
-credentials_config = env_config['credentials']
-
-#Retrieve password from keyring, make sure you have installed keyring and have set the keyring service, username and password
-
-password = keyring.get_password(credentials_config['servicename'], credentials_config['username'])
-
 #Get s3 configuration information from the config.json file
 
 s3_config = env_config['s3']
@@ -42,7 +27,7 @@ for device in env_config['lab_devices']:
 
     #Connect to device
 
-    net_connect = ConnectHandler(device_type=device['device_type'], ip=device['ip'], username=device['username'], password=password)
+    net_connect = ConnectHandler(device_type=device['device_type'], ip=device['ip'], username=device['username'], password=device['password'])
     net_connect.enable()
 
     #Retrieve hostname of device

@@ -8,19 +8,22 @@
             "hostname" : "switch1",
             "device_type": "cisco_nxos",
             "ip": "1.1.1.1",
-            "username": "admin"
+            "username": "admin",
+            "password": "password" 
         },
         {
             "hostname" : "switch2",
             "device_type": "cisco_nxos",
             "ip": "1.1.1.2",
-            "username": "admin"
+            "username": "admin",
+            "password": "password"
         },
         {
             "hostname" : "asa1",
             "device_type": "cisco_asa",
             "ip": "1.1.1.3",
-            "username": "admin"
+            "username": "admin",
+            "password": "password"
         }
     ]
 }
