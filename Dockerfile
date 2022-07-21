@@ -14,4 +14,4 @@ RUN pip install -r /lab_backup/requirements.txt
 
 WORKDIR /lab_backup
 
-ENTRYPOINT ["python", "lab_backup.py $PASSWD"]
+ENTRYPOINT ["python", "lab_backup.py"]
